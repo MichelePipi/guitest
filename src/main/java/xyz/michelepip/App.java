@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.annotation.command.Commands;
 import org.bukkit.plugin.java.annotation.plugin.Plugin;
 
 import xyz.michelepip.cmd.HelloWorldCmd;
+import xyz.michelepip.events.EventTestHandler;
 
 /**
  * Hello world!
@@ -18,9 +19,14 @@ public class App extends JavaPlugin {
         getCommand("helloworld").setExecutor(new HelloWorldCmd());
     }
 
+    private void registerEvents() {
+        getServer().getPluginManager().registerEvents(new EventTestHandler(), this);
+    }
+
     @Override
     public void onEnable() {
         registerCommands();
+        registerEvents();
     }
 
     @Override
