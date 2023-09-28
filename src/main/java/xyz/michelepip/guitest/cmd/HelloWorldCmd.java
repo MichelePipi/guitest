@@ -1,4 +1,4 @@
-package xyz.michelepip.cmd;
+package xyz.michelepip.guitest.cmd;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
