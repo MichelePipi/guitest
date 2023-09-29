@@ -1,5 +1,5 @@
 name: GuiTest
-main: xyz.michelepip.guitest.App
+main: xyz.michelepip.guitest.GuiTest
 version: 1.0-SNAPSHOT
 api-version: 1.20
 description: GuiTest
