@@ -9,6 +9,7 @@ import xyz.michelepip.guitest.cmd.GuiTestCmd;
 import xyz.michelepip.guitest.cmd.HelloWorldCmd;
 import xyz.michelepip.guitest.events.EventTestHandler;
 import xyz.michelepip.guitest.events.filter.ChatFilterEventHandler;
+import xyz.michelepip.guitest.events.filter.cmd.RefreshChatFilterCommand;
 
 /**
  * Hello world!
@@ -25,6 +26,7 @@ public final class GuiTest extends JavaPlugin {
     private void registerCommands() {
         getCommand("helloworld").setExecutor(new HelloWorldCmd());
         getCommand("guitest").setExecutor(new GuiTestCmd());
+        getCommand("refreshfilter").setExecutor(new RefreshChatFilterCommand());
     }
 
     private void registerEvents() {

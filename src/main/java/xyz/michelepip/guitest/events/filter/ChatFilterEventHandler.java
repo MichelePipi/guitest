@@ -32,25 +32,21 @@ public class ChatFilterEventHandler implements Listener {
     public void onChatEvent(AsyncPlayerChatEvent e) {
         String message = e.getMessage().toLowerCase();
         final Player p = e.getPlayer();
-        int ops = 0;
-
-        p.sendMessage("The bad words in the list: " + badWords.toString());
-        p.sendMessage("msg: " + message);
 
         for (final String word : message.split(" '")) {
-            p.sendMessage("Currently looking at " + word);
-            ops++;
             for (final String badWord : badWords) {
-                p.sendMessage("Currently looking at bad word " + badWord);
-                ops++;
                 if (Util.stringExistsInString(word, badWord)) {
-                    p.sendMessage(C.RED
-                            + "That word is against the server policies. Your message was not sent and this has been logged.\nPlease refrain from this behavior to avoid punishment.");
-                    e.getPlayer().playSound(e.getPlayer().getLocation(), Sound.ENTITY_CAT_DEATH, 1.0f, 0.5f);
-                    // e.setCancelled(true);
+                    if (!p.hasPermission("guitest.chatfilter.bypass")) {
+                        p.sendMessage(C.RED
+                                + "That word is against the server policies. Your message was not sent and this has been logged.\nPlease refrain from this behavior to avoid punishment.");
+                        e.getPlayer().playSound(e.getPlayer().getLocation(), Sound.ENTITY_CAT_DEATH, 1.0f, 0.5f);
+                        e.setCancelled(true);
+                        return;
+                    }
+                    p.sendMessage(
+                            C.RED + "You sent an innapropriate message, but you have permission to bypass the filter.");
                 }
             }
         }
-        p.sendMessage("operations: " + ops);
     }
 }
