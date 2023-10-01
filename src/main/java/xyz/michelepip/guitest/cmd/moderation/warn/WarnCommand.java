@@ -13,7 +13,7 @@ import xyz.michelepip.guitest.api.C;
 public class WarnCommand implements CommandExecutor {
 
     HashMap<Player, Integer> warns = new HashMap<Player, Integer>();
-    private static final int MAXIMUM_WARNINGS = 3;
+    private final int MAXIMUM_WARNINGS = 3;
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
