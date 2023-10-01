@@ -12,3 +12,5 @@ commands:
     description: 'HelloWorld'
   refreshfilter:
     description: 'Refresh Chat Filter'
+  warn:
+    description: 'Warn player'

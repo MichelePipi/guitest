@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import xyz.michelepip.guitest.cmd.GuiTestCmd;
 import xyz.michelepip.guitest.cmd.HelloWorldCmd;
+import xyz.michelepip.guitest.cmd.moderation.warn.WarnCommand;
 import xyz.michelepip.guitest.events.EventTestHandler;
 import xyz.michelepip.guitest.events.filter.ChatFilterEventHandler;
 import xyz.michelepip.guitest.events.filter.cmd.RefreshChatFilterCommand;
@@ -27,6 +28,7 @@ public final class GuiTest extends JavaPlugin {
         getCommand("helloworld").setExecutor(new HelloWorldCmd());
         getCommand("guitest").setExecutor(new GuiTestCmd());
         getCommand("refreshfilter").setExecutor(new RefreshChatFilterCommand());
+        getCommand("warn").setExecutor(new WarnCommand());
     }
 
     private void registerEvents() {
