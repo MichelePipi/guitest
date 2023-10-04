@@ -18,12 +18,21 @@
 
   <repositories>
     <repository>
-      <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        <id>papermc</id>
+        <url>https://repo.papermc.io/repository/maven-public/</url>
+    </repository>
+    <repository>
+      <id>sonatype</id>
+      <url>https://s01.oss.sonatype.org/content/groups/public/</url>
     </repository>
   </repositories>
 
   <dependencies>
+    <dependency>
+      <groupId>io.github.rysefoxx.inventory</groupId>
+      <artifactId>RyseInventory-Plugin</artifactId>
+      <version>1.5.7</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -31,11 +40,11 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.spigotmc</groupId>
-      <artifactId>spigot-api</artifactId>
+      <groupId>io.papermc.paper</groupId>
+      <artifactId>paper-api</artifactId>
       <version>1.20.1-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
-    </dependency>
+  </dependency>
   </dependencies>
 
   <build>

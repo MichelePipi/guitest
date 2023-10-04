@@ -1,6 +1,7 @@
 name: GuiTest
 main: xyz.michelepip.guitest.GuiTest
 version: 1.0-SNAPSHOT
+depends: ['RyseInventory']
 api-version: 1.20
 description: GuiTest
 author: Michele
@@ -14,3 +15,5 @@ commands:
     description: 'Refresh Chat Filter'
   warn:
     description: 'Warn player'
+  rysetest:
+    description: 'Test ryse api'
