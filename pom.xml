@@ -29,9 +29,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>io.github.rysefoxx.inventory</groupId>
-      <artifactId>RyseInventory-Plugin</artifactId>
-      <version>1.5.7</version>
+      <groupId>com.github.stefvanschie.inventoryframework</groupId>
+      <artifactId>IF</artifactId>
+      <version>0.10.11</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
