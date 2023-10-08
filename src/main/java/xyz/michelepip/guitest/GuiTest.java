@@ -12,6 +12,7 @@ import xyz.michelepip.guitest.cmd.moderation.warn.WarnCommand;
 import xyz.michelepip.guitest.events.EventTestHandler;
 import xyz.michelepip.guitest.events.filter.ChatFilterEventHandler;
 import xyz.michelepip.guitest.events.filter.cmd.RefreshChatFilterCommand;
+import xyz.michelepip.guitest.guitest.InventoryFrameworkTestCommand;
 
 /**
  * Hello world!
@@ -55,6 +56,7 @@ public final class GuiTest extends JavaPlugin {
         getCommand("guitest").setExecutor(new GuiTestCmd());
         getCommand("refreshfilter").setExecutor(new RefreshChatFilterCommand());
         getCommand("warn").setExecutor(new WarnCommand());
+        getCommand("iftest").setExecutor(new InventoryFrameworkTestCommand());
     }
 
     private void registerEvents() {
