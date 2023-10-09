@@ -6,8 +6,6 @@ description: GuiTest
 author: Michele
 
 commands:
-  guitest:
-    description: 'Test GUI'
   helloworld:
     description: 'HelloWorld'
   refreshfilter:

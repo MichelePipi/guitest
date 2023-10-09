@@ -2,11 +2,9 @@ package xyz.michelepip.guitest;
 
 import java.util.logging.Logger;
 
-import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import xyz.michelepip.guitest.cmd.GuiTestCmd;
 import xyz.michelepip.guitest.cmd.HelloWorldCmd;
 import xyz.michelepip.guitest.cmd.moderation.warn.WarnCommand;
 import xyz.michelepip.guitest.events.EventTestHandler;
@@ -46,14 +44,8 @@ public final class GuiTest extends JavaPlugin {
         infoLog("Enabled GuiTest Version " + getDescription().getVersion());
     }
 
-    @Override
-    public void onDisable() {
-
-    }
-
     private void registerCommands() {
         getCommand("helloworld").setExecutor(new HelloWorldCmd());
-        getCommand("guitest").setExecutor(new GuiTestCmd());
         getCommand("refreshfilter").setExecutor(new RefreshChatFilterCommand());
         getCommand("warn").setExecutor(new WarnCommand());
         getCommand("iftest").setExecutor(new InventoryFrameworkTestCommand());
@@ -61,7 +53,6 @@ public final class GuiTest extends JavaPlugin {
 
     private void registerEvents() {
         pluginManager.registerEvents(new EventTestHandler(), this);
-        pluginManager.registerEvents(new GuiTestCmd(), this);
         pluginManager.registerEvents(new ChatFilterEventHandler(), this);
     }
 
